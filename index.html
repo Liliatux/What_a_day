@@ -6,11 +6,28 @@
 	<title>What a day</title>
 </head>
 <body>
-	<input type="number" placeholder="Jour">
-	<input type="number" placeholder="Année">
-	<select name="mois" id="mois">
-		<option value="mois"></option>
-	</select>
+	<div class="entete"></div>
+	<div class="container">
+		<span>Jour</span>
+		<input type="number" id="jour" placeholder="Jour">
+		<span>Mois</span>
+		<select name="mois" id="mois">
+			<option value="janvier">Janvier</option>
+			<option value="fevrier">Février</option>
+			<option value="mars">Mars</option>
+			<option value="avril">Avril</option>
+			<option value="mai">Mai</option>
+			<option value="juin">Juin</option>
+			<option value="juillet">Juillet</option>
+			<option value="aout">Aout</option>
+			<option value="septembre">Septembre</option>
+			<option value="octobre">Octobre</option>
+			<option value="novembre">Novembre</option>
+			<option value="decembre">Décembre</option>
+		</select>
+		<span>Année</span>
+		<input type="number" id="annee" placeholder="Année">
+	</div>
 	<button>Vérifier</button>
 
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
