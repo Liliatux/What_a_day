@@ -4,8 +4,6 @@ What day is it ?
 Créez une app qui permets de connaitre le jour de la semaine en fonction d'une date fournie par l'utilisateur.
 
 ## Spec
-- Votre programme doit vérifier que le jour est compris entre 1 et 31
-- L'année doit etre supérieure à 0
 - En cas d'erreur, afficher le message correspondant dans une `<div id="message" class="error">`  et changez la bordure du champs correspondant en rouge
 - En cas de réussite affichez une `<div class="overlay">` qui occupe tout l'écran et afficher en taille de texte de `100pt` le jour correspondant ainsi qu'un `<button id="restart">` contenant le label `Recommencer`
 - Rapprochez vous au maximum du design imposé dans les screenshots

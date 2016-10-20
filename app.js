@@ -1,8 +1,9 @@
 (function(){
 	var app = {
-		day: null,
-		month:null,
-		year: null,
+		day: parseInt($('#jour').val(), 10),
+		month: $('select').val(),
+		year: parseInt($('#annee').val(), 10),
+		date: null,
 		
 		init: function(){
 			this.listeners();
@@ -13,36 +14,17 @@
 		},
 
 		start: function(){
-			this.day();
-			//this.month();
-			//this.year();
-			this.date = moment('', 'DD-MM-YYYY');
-			$('body').html(moment().format('dddd'));
+			moment.locale('fr');
+			this.date();
+			//this.date = moment('', 'DD-MM-YYYY').locale();
+			//$('body').html(moment().format('dddd').locale());
 		},
 
-		day: function(){
-			var dayInput = $('#jour').val();
-			this.day = moment().day(this.dayofweek);
-			if(this.day === moment.duration().days(1-31)){
-				console.log("good");
-			} else{
-				alert("Ce jour n'existe pas");
-			}
-		},
-
-		month: function(){
-			var daySelect = $('select').change();
-			this.month = moment().local(daySelect, 'MMMM');
-		},
-
-		year: function(){
-			var yearInput = $('#annee').val();
-			this.year = moment.min(moment[0]);
+		date: function(){
+			moment().format('DD-MM-YYYY');
 		}
 
 	}
-	moment().local();
-	console.log(moment().format('LL'));
 	app.init();
 
 })();
