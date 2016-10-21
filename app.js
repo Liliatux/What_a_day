@@ -29,34 +29,33 @@
 		},
 
 		errorDay: function(){
-			error = true;
-
 			if(this.day < 1 || this.day > 31){
+				error = true;
 				$('.error').show().append('Le jour doit être compris entre 1 et 31 !');
 				$('#jour').css('border',"2px solid #ff7473");
 			}
 		},
 
 		errorYear: function(){
-			error = true;
-
 			if(this.year < 0){
+				error = true;
 				$('.error').show().append("L'année ne doit pas être inférieur à 0 !");
 				$('#annee').css('border', "2px solid #ff7473");
 			} 
 		},
 
 		message: function(){
-			if(error === true){
+			if(this.error === true){
 				errorDay();
 				errorYear();
+				return;
 			}
-			else if(error === false){
+			else if(this.error === false){
 				$('.container').hide();
 				$('.overlay').show();
 				$('#date').text(moment(this.date).format('dddd'));
 			}
-		}
+		},
 
 		reset: function(){
 			$('.overlay').hide();
