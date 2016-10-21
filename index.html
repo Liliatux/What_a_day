@@ -7,8 +7,12 @@
 	<title>What a day</title>
 </head>
 <body>
-	<div class="entete"></div>
+	<div class="overlay">
+		<span id="date"></span>
+		<button id="restart">Recommencer</button>
+	</div>
 	<div class="container">
+	<div id="message" class="error"></div>
 		<table>
 			<tr>
 				<td>Jour</td>
@@ -17,10 +21,10 @@
 			</tr>
 			<tr>
 				<td>
-					<input class="styled" type="text" id="jour">
+					<input type="text" id="jour">
 				</td>
 				<td>
-					<select class="styled" name="mois" id="mois">
+					<select name="mois" id="mois">
 						<option value="00">Janvier</option>
 						<option value="01">Février</option>
 						<option value="02">Mars</option>
@@ -36,13 +40,13 @@
 					</select>
 				</td>
 				<td>
-					<input class="styled" type="text" id="annee">
+					<input type="text" id="annee">
 				</td>
 			</tr>
 			<tr></tr>
 			<tr>
-				<td colspan="3" id="bouton">
-					<button class="styled">Vérifier</button>
+				<td colspan="3" class="centrer">
+					<button id="bouton">Vérifier</button>
 				</td>
 			</tr>
 		</table>

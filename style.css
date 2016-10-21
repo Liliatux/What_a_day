@@ -4,6 +4,23 @@ body {
 	background: #34314c;
 }
 
+.error {
+	display:none;
+	background-color: #ff7473;
+	color: #fff;
+	height: 80px;
+}
+
+.overlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #9055A2;
+	color: #D499B9;
+	font-size: 100px;
+	text-align: center;
+}
+
 .container {
 	margin: 0 auto;
 	width: 600px;
@@ -15,13 +32,39 @@ tr {
 	width: 600px;
 }
 
-.styled {
+#jour {
 	border: 2px solid #47b8e0;
 	background-color: transparent;
 	color: #47b8e0;
 	padding: 10px;
+	width: 200px;
+}
+
+#mois {
+	border: 2px solid #47b8e0;
+	background-color: transparent;
+	color: #47b8e0;
+	padding: 10px;
+	width: 200px;
+}
+
+#annee {
+	border: 2px solid #47b8e0;
+	background-color: transparent;
+	color: #47b8e0;
+	padding: 10px;
+	width: 200px;
+}
+
+.centrer {
+	text-align: center;
+
 }
 
 #bouton {
-	text-align: center;
+	border: 2px solid #47b8e0;
+	background-color: transparent;
+	color: #47b8e0;
+	padding: 10px;
+	width: 200px;
 }
