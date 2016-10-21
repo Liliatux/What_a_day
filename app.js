@@ -4,6 +4,7 @@
 		month: null,
 		year: null,
 		date: null,
+		error:null,
 		
 		init: function(){
 			this.listeners();

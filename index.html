@@ -2,33 +2,51 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>What a day</title>
 </head>
 <body>
 	<div class="entete"></div>
 	<div class="container">
-		<span>Jour</span>
-		<input type="number" id="jour" placeholder="Jour">
-		<span>Mois</span>
-		<select name="mois" id="mois">
-			<option value="00">Janvier</option>
-			<option value="01">Février</option>
-			<option value="02">Mars</option>
-			<option value="03">Avril</option>
-			<option value="04">Mai</option>
-			<option value="05">Juin</option>
-			<option value="06">Juillet</option>
-			<option value="07">Aout</option>
-			<option value="08">Septembre</option>
-			<option value="09">Octobre</option>
-			<option value="10">Novembre</option>
-			<option value="11">Décembre</option>
-		</select>
-		<span>Année</span>
-		<input type="number" id="annee" placeholder="Année">
+		<table>
+			<tr>
+				<td>Jour</td>
+				<td>Mois</td>
+				<td>Année</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="styled" type="text" id="jour">
+				</td>
+				<td>
+					<select class="styled" name="mois" id="mois">
+						<option value="00">Janvier</option>
+						<option value="01">Février</option>
+						<option value="02">Mars</option>
+						<option value="03">Avril</option>
+						<option value="04">Mai</option>
+						<option value="05">Juin</option>
+						<option value="06">Juillet</option>
+						<option value="07">Aout</option>
+						<option value="08">Septembre</option>
+						<option value="09">Octobre</option>
+						<option value="10">Novembre</option>
+						<option value="11">Décembre</option>
+					</select>
+				</td>
+				<td>
+					<input class="styled" type="text" id="annee">
+				</td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td colspan="3" id="bouton">
+					<button class="styled">Vérifier</button>
+				</td>
+			</tr>
+		</table>
 	</div>
-	<button>Vérifier</button>
 
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="node_modules/moment/moment.js"></script>

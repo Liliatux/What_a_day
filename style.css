@@ -1,4 +1,27 @@
 body {
-	font-size: Open Sans;
+	font-family: 'Open Sans', sans-serif;
+	color: #47b8e0;
 	background: #34314c;
+}
+
+.container {
+	margin: 0 auto;
+	width: 600px;
+	padding: 100px
+}
+
+tr {
+	height: 40px;
+	width: 600px;
+}
+
+.styled {
+	border: 2px solid #47b8e0;
+	background-color: transparent;
+	color: #47b8e0;
+	padding: 10px;
+}
+
+#bouton {
+	text-align: center;
 }
