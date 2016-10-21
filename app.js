@@ -1,8 +1,8 @@
 (function(){
 	var app = {
-		day: parseInt($('#jour').val(), 10),
-		month: $('select').val(),
-		year: parseInt($('#annee').val(), 10),
+		day: null,
+		month: null,
+		year: null,
 		date: null,
 		
 		init: function(){
@@ -15,13 +15,15 @@
 
 		start: function(){
 			moment.locale('fr');
-			this.date();
-			//this.date = moment('', 'DD-MM-YYYY').locale();
-			//$('body').html(moment().format('dddd').locale());
+			this.userDate();
+			$('body').html(moment(this.date).format('dddd'));
 		},
 
-		date: function(){
-			moment().format('DD-MM-YYYY');
+		userDate: function(){
+			this.day = parseInt($('#jour').val(), 10);
+			this.month = $('select').val();
+			this.year = parseInt($('#annee').val(), 10);
+			this.date = moment({year: this.year, month: this.month, day: this.day});
 		}
 
 	}
