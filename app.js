@@ -30,25 +30,26 @@
 
 		errorDay: function(){
 			if(this.day < 1 || this.day > 31){
-				error = true;
 				$('.error').show().append('Le jour doit être compris entre 1 et 31 !');
 				$('#jour').css('border',"2px solid #ff7473");
+				this.error = true;
 			}
 		},
 
 		errorYear: function(){
 			if(this.year < 0){
-				error = true;
 				$('.error').show().append("L'année ne doit pas être inférieur à 0 !");
 				$('#annee').css('border', "2px solid #ff7473");
+				this.error = true;
 			} 
 		},
 
 		message: function(){
+			this.errorDay();
+			this.errorYear();
+
 			if(this.error === true){
-				errorDay();
-				errorYear();
-				return;
+				this.error = false;
 			}
 			else if(this.error === false){
 				$('.container').hide();
